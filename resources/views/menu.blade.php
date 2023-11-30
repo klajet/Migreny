@@ -10,15 +10,15 @@
 <body>
 <div class="container">
     <div class="col allign-iitems-center justify-content-center text-center p-2 m-4">
-        <h1>CRUD</h1>
-        <hr class="divider" />
-        <h3>Wybierz tabelę</h3>
+        <h1>Migreny CRUD</h1>
+        <hr class="divider m-5 p-1" />
+        <h3>Wybierz tabelę:</h3>
     </div>
-    <div>
+    <div class="text-center">
         @foreach ($tables as $table)
-        <a class="btn btn-secondary" href="/"> {{ $table->name }} </a>
-                            
+            <a class="btn btn-primary m-1" href="/{{ $table->name }}"> {{ $table->name }} </a>
         @endforeach
+        <hr class="divider m-5" />
     </div>
 </div>
 </body>

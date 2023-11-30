@@ -14,9 +14,10 @@ use App\Http\Controllers\menuController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('menu');
-// });
-Route::resource('tables', menuController::class);
+Route::get('/', function () {
+    return view('menu');
+});
+Route::resource('/', menuController::class);
+
 
 Route::resource('doctors', doctorsController::class);
