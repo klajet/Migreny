@@ -15,20 +15,13 @@
                 </div>
             </div>
         </div>
-        @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
-        @endif
         <table class="table table-bordered">
-            <thead>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Last Name</th>
                     <th>address_id</th>
                 </tr>
-            </thead>
             <tbody>
                 @foreach ($doctors as $doctor)
                     <tr>
@@ -37,7 +30,7 @@
                         <td>{{ $doctor->lastname }}</td>
                         <td>{{ $doctor->address_id }}</td>
                     </tr>
-                    @endforeach
+                @endforeach
             </tbody>
         </table>
         {{ $doctors->links() }}
