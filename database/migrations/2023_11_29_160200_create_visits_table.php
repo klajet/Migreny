@@ -16,12 +16,12 @@ return new class extends Migration
             $table->timestamps();
             $table->dateTime('visitDate');
             $table->float('cost');
-            $table->foreignId('doctor_id');
-            $table->foreignId('patient_id');
-            $table->foreignId('prescription_id');
-            $table->foreign('doctor_id')->references('id')->on('doctors');
-            $table->foreign('patient_id')->references('id')->on('patients');
-            $table->foreign('prescription_id')->references('id')->on('prescriptions');
+            $table->foreignId('doctor_id')->nullable();
+            $table->foreignId('patient_id')->nullable();
+            $table->foreignId('prescription_id')->nullable();
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('set null');
+            $table->foreign('patient_id')->references('id')->on('patients')->onDelete('set null');
+            $table->foreign('prescription_id')->references('id')->on('prescriptions')->onDelete('set null');
         });
     }
 

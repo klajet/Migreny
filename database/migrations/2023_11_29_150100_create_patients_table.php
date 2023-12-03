@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('lastname',100);
             $table->char('pesel', 11);
             $table->string('email', 100);
-            $table->foreignId('doctor_id');
-            $table->foreignId('address_id');
-            $table->foreign('doctor_id')->references('id')->on('doctors');
-            $table->foreign('address_id')->references('id')->on('addresses');
+            $table->foreignId('doctor_id')->nullable();
+            $table->foreignId('address_id')->nullable();
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('set null');
+            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('set null');
         });
     }
 

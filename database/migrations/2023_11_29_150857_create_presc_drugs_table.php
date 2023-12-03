@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('presc_drugs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('drug_id');
-            $table->foreignId('presc_id');
+            $table->foreignId('drug_id')->nullable();
+            $table->foreignId('presc_id')->nullable();
             $table->foreign('drug_id')->references('id')->on('drugs');
             $table->foreign('presc_id')->references('id')->on('prescriptions');
         });

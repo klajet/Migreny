@@ -3,6 +3,7 @@
 <head>
     <title>CRUD</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link href="css/extended.css" rel="stylesheet" />
     <script type="text/javascript" src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
