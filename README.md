@@ -6,11 +6,11 @@ Zadanie na laby 6 i 7 z Aplikacji Internetowych
 - [x] Migrations
 - [x] Factories
 - [x] Seeders 
-- [ ] Menu
+- [x] Menu (?)
 - [ ] CRUD template
 - [ ] Tables CRUD
   - [ ] Create 
-  - [ ] Read
-  - [ ] Update
-  - [ ] Delete
+  - [x] Read
+  - [x] Update
+  - [x] Delete
 - [ ] Test with other DB
