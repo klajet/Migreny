@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\doctorsController;
+use App\Http\Controllers\addressesController;
 use App\Http\Controllers\menuController;
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::resource('/', menuController::class);
 
 
 Route::resource('doctors', doctorsController::class);
+Route::resource('addresses', addressesController::class);
+

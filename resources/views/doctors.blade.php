@@ -26,7 +26,6 @@
                 <td>{{ $doctor->phone }}</td>
                 <td>{{ $doctor->room_id }}</td>
                 <td>{{ $doctor->address_id }}</td>
-                {{-- <td><a class="btn btn-primary" href="{{ route('doctors.edit',$doctor->id) }}"><img src="pencil-square.svg " /></a></td> --}}
                 <td><a class="btn btn-primary" onclick="show({{$doctor->id}})"><img src="pencil-square.svg " /></a></td>
                 <td>      
                     <form action="{{ route('doctors.destroy',$doctor->id) }}" method="Post">
@@ -37,7 +36,6 @@
                 </td>
             </tr>
             <tr>
-
                 <form action="{{ route('doctors.update',$doctor->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
@@ -49,25 +47,23 @@
                 <td><input type="text" id="editRoom_id" name="room_id" value="{{ $doctor->room_id }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td><input type="text" id="editAdress_id" name="address_id" value="{{ $doctor->address_id }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td colspan="2"><button type="submit" class="btn btn-warning {{$doctor->id}}" hidden><img src="check.svg " onclick="return confirm('Are you sure you want to update this item?');" /></button></td>
-            </form>
-
-
+                </form>
             </tr>
         @endforeach
     </tbody>
     </table>
-    {{ $doctors->links() }}
+    <div class="pagination justify-content-center"> {{ $doctors->links() }} </div>    
 @endsection
 
 @section('tableCreate')
     <form action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-        <input type="text" name="name" placeholder="name">
-        <input type="text" name="lastname" placeholder="lastname">
-        <input type="text" name="pesel" placeholder="pesel">
-        <input type="text" name="phone" placeholder="phone">
-        <input type="text" name="room_id" placeholder="room_id">
-        <input type="text" name="address_id" placeholder="address_id">
-        <button type="submit" class="">Create</button>
+        <input type="text" name="name" placeholder="name" required>
+        <input type="text" name="lastname" placeholder="lastname" required>
+        <input type="text" name="pesel" placeholder="pesel" required>
+        <input type="text" name="phone" placeholder="phone" required>
+        <input type="text" name="room_id" placeholder="room_id"required>
+        <input type="text" name="address_id" placeholder="address_id" required>
+        <button type="submit" class="btn btn-warning">Create</button>
     </form>
 @endsection
