@@ -46,7 +46,7 @@
                 <td><input type="text" id="editPhone" name="phone" value="{{ $doctor->phone }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td><input type="text" id="editRoom_id" name="room_id" value="{{ $doctor->room_id }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td><input type="text" id="editAdress_id" name="address_id" value="{{ $doctor->address_id }}" class="form-control {{$doctor->id}}" hidden></td>
-                <td colspan="2"><button type="submit" class="btn btn-warning {{$doctor->id}}" hidden><img src="check.svg " onclick="return confirm('Are you sure you want to update this item?');" /></button></td>
+                <td colspan="2"><button type="submit" class="btn btn-warning {{$doctor->id}}"  onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
                 </form>
             </tr>
         @endforeach
@@ -64,6 +64,6 @@
         <input type="text" name="phone" placeholder="phone" required>
         <input type="text" name="room_id" placeholder="room_id"required>
         <input type="text" name="address_id" placeholder="address_id" required>
-        <button type="submit" class="btn btn-warning">Create</button>
+        <button type="submit" class="btn btn-warning" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
     </form>
 @endsection

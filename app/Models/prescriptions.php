@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class prescriptions extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['expires', 'description'];
 }

@@ -43,7 +43,7 @@
                 <td><input type="text" id="editCity" name="city" value="{{ $address->city }}" class="form-control {{$address->id}}" hidden></td>
                 <td><input type="text" id="editCityCode" name="cityCode" value="{{ $address->cityCode }}" class="form-control {{$address->id}}" hidden></td>
                 <td><input type="text" id="editCountry" name="country" value="{{ $address->country }}" class="form-control {{$address->id}}" hidden></td>
-                <td colspan="2"><button type="submit" class="btn btn-warning {{$address->id}}" hidden><img src="check.svg " onclick="return confirm('Are you sure you want to update this item?');" /></button></td>
+                <td colspan="2"><button type="submit" class="btn btn-warning {{$address->id}}" onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
                 </form>
             </tr>
         @endforeach
@@ -60,6 +60,6 @@
         <input type="text" name="city" placeholder="city" required>
         <input type="text" name="cityCode" placeholder="cityCode" required>
         <input type="text" name="country" placeholder="country"required>
-        <button type="submit" class="btn btn-warning">Create</button>
+        <button type="submit" class="btn btn-warning" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
     </form>
 @endsection

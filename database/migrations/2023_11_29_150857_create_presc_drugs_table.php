@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('drug_id')->nullable();
             $table->foreignId('presc_id')->nullable();
-            $table->foreign('drug_id')->references('id')->on('drugs');
-            $table->foreign('presc_id')->references('id')->on('prescriptions');
+            $table->foreign('drug_id')->references('id')->on('drugs')->onDelete('set null');
+            $table->foreign('presc_id')->references('id')->on('prescriptions')->onDelete('set null');
         });
     }
 
