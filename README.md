@@ -8,8 +8,8 @@ Zadanie na laby 6 i 7 z Aplikacji Internetowych
 - [x] Seeders 
 - [x] Menu (?)
 - [ ] CRUD template
-- [ ] Tables CRUD
-  - [ ] Create 
+- [x] Tables CRUD
+  - [x] Create 
   - [x] Read
   - [x] Update
   - [x] Delete
