@@ -9,6 +9,7 @@ use App\Http\Controllers\patientsController;
 use App\Http\Controllers\prescriptionsController;
 use App\Http\Controllers\prescdrugController;
 use App\Http\Controllers\roomsController;
+use App\Http\Controllers\visitsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,5 @@ Route::resource('patients', patientsController::class);
 Route::resource('prescriptions', prescriptionsController::class);
 Route::resource('presc_drugs', prescdrugController::class);
 Route::resource('rooms', roomsController::class);
+Route::resource('visits', visitsController::class);
 
