@@ -10,7 +10,7 @@ class drugsController extends Controller
 {
     public function index(Drugs $editDrug)
     {
-        $drugs = drugs::orderBy('id','asc')->paginate(10);
+        $drugs = drugs::orderBy('id','asc')->paginate(15);
         return view('drugs', compact('drugs'));
     }
 

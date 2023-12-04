@@ -10,7 +10,7 @@ class patientsController extends Controller
 {
     public function index(Patients $editPatient)
     {
-        $patients = patients::orderBy('id','asc')->paginate(10);
+        $patients = patients::orderBy('id','asc')->paginate(15);
         return view('patients', compact('patients'));
     }
 

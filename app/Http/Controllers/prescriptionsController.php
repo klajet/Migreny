@@ -9,7 +9,7 @@ class prescriptionsController extends Controller
 {
     public function index(Prescriptions $editPrescription)
     {
-        $prescriptions = prescriptions::orderBy('id','asc')->paginate(10);
+        $prescriptions = prescriptions::orderBy('id','asc')->paginate(15);
         return view('prescriptions', compact('prescriptions'));
     }
 

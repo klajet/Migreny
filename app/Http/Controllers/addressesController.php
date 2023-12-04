@@ -9,7 +9,7 @@ class addressesController extends Controller
 {
     public function index(Addresses $editAddress)
     {
-        $addresses = addresses::orderBy('id','asc')->paginate(10);
+        $addresses = addresses::orderBy('id','asc')->paginate(15);
         return view('addresses', compact('addresses'));
     }
 

@@ -9,7 +9,7 @@ class prescdrugController extends Controller
 {
     public function index(Presc_drugs $editPrescdrug)
     {
-        $prescdrugs = Presc_drugs::orderBy('id','asc')->paginate(10);
+        $prescdrugs = Presc_drugs::orderBy('id','asc')->paginate(15);
         return view('presc_drugs', compact('prescdrugs'));
     }
 

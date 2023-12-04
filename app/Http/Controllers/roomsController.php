@@ -9,7 +9,7 @@ class roomsController extends Controller
 {
     public function index(Rooms $editRoom)
     {
-        $rooms = Rooms::orderBy('id','asc')->paginate(10);
+        $rooms = Rooms::orderBy('id','asc')->paginate(15);
         return view('rooms', compact('rooms'));
     }
 
