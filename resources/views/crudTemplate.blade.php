@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <title> @yield('tableName') </title>
     <link rel="icon" type="image/x-icon" href="/favicon.png" />
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/CRUDstyles.css">
     <script type="text/javascript" src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -23,7 +24,6 @@
                 </div>
             </div>
         </div>
-        {{-- <span >Read</span> <!-- zrobić ładne --> --}}
         <table class="table table-bordered table-responsive table-striped align-middle">
         @yield('tableRead')
         
@@ -36,6 +36,7 @@
 
         <hr class="divider m-5" />
     </div>
+    <div class="fixed-bottom" style="text-align: right"><img src="/iconsmall.png" /></div>
     <div class="fixed-bottom mb-3 mx-3"><a class="btn btn-secondary" href="/">⇇ Menu</a></div>
 </body>
 </html>

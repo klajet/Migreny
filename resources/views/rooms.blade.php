@@ -5,9 +5,10 @@
 @section('tableRead')
     <thead>
         <tr>
-            <th>#</th>
-            <th>floor</th>
-            <th>door</th>
+            <th style="width: 5%">#</th>
+            <th style="width: 40%">floor</th>
+            <th style="width: 40%">door</th>
+            <th colspan="2" style="width: 10%"></th>
         </tr>
     </thead>
     <tbody>
@@ -16,9 +17,9 @@
                 <td><span>{{ $room->id }}</span></td>
                 <td>{{ $room->floor }}</td>
                 <td>{{ $room->door }}</td>
-                <td><a class="btn btn-primary" onclick="show({{$room->id}})"><img src="pencil-square.svg " /></a></td>
+                <td class="center"><a class="btn btn-primary" onclick="show({{$room->id}})"><img src="pencil-square.svg " /></a></td>
                 <td>      
-                    <form action="{{ route('rooms.destroy',$room->id) }}" method="Post">
+                    <form action="{{ route('rooms.destroy',$room->id) }}" method="Post" class="center">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"><img src="trash.svg " /></button>
@@ -32,7 +33,7 @@
                 <td></td>
                 <td><input type="text" id="editFloor" name="floor" value="{{ $room->floor }}" class="form-control {{$room->id}}" hidden></td>
                 <td><input type="text" id="editDoor" name="door" value="{{ $room->door }}" class="form-control {{$room->id}}" hidden></td>
-                <td colspan="2"><button type="submit" class="btn btn-warning {{$room->id}}" onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
+                <td colspan="2" class="center"><button type="submit" class="btn btn-warning {{$room->id}}" onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
                 </form>
             </tr>
         @endforeach
@@ -42,10 +43,10 @@
 @endsection
 
 @section('tableCreate')
-    <form action="{{ route('rooms.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('rooms.store') }}" method="POST" enctype="multipart/form-data" class="center">
     @csrf
-        <input type="text" name="floor" placeholder="floor" required>
-        <input type="text" name="door" placeholder="door" required>
-        <button type="submit" class="btn btn-warning" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
+        <input type="text" name="floor" placeholder="floor" class="m-2" required>
+        <input type="text" name="door" placeholder="door" class="m-2" required>
+        <button type="submit" class="btn btn-warning m-2" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
     </form>
 @endsection

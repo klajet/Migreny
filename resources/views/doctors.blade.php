@@ -5,13 +5,14 @@
 @section('tableRead')
     <thead>
         <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Last Name</th>
-            <th>PESEL</th>
-            <th>Phone</th>
-            <th>room_id</th>
-            <th>address_id</th>
+            <th style="width: 5%">#</th>
+            <th style="width: 10%">Name</th>
+            <th style="width: 15%">Last Name</th>
+            <th style="width: 15%">PESEL</th>
+            <th style="width: 15%">Phone</th>
+            <th style="width: 5%">room_id</th>
+            <th style="width: 5%">address_id</th>
+            <th colspan="2" style="width: 10%"></th>
         </tr>
     </thead>
     <tbody>
@@ -26,9 +27,9 @@
                 <td>{{ $doctor->phone }}</td>
                 <td>{{ $doctor->room_id }}</td>
                 <td>{{ $doctor->address_id }}</td>
-                <td><a class="btn btn-primary" onclick="show({{$doctor->id}})"><img src="pencil-square.svg " /></a></td>
+                <td class="center"><a class="btn btn-primary" onclick="show({{$doctor->id}})"><img src="pencil-square.svg " /></a></td>
                 <td>      
-                    <form action="{{ route('doctors.destroy',$doctor->id) }}" method="Post">
+                    <form action="{{ route('doctors.destroy',$doctor->id) }}" method="Post" class="center">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"><img src="trash.svg " /></button>
@@ -46,7 +47,7 @@
                 <td><input type="text" id="editPhone" name="phone" value="{{ $doctor->phone }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td><input type="text" id="editRoom_id" name="room_id" value="{{ $doctor->room_id }}" class="form-control {{$doctor->id}}" hidden></td>
                 <td><input type="text" id="editAdress_id" name="address_id" value="{{ $doctor->address_id }}" class="form-control {{$doctor->id}}" hidden></td>
-                <td colspan="2"><button type="submit" class="btn btn-warning {{$doctor->id}}"  onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
+                <td colspan="2" class="center"><button type="submit" class="btn btn-warning {{$doctor->id}}"  onclick="return confirm('Are you sure you want to update this item?');" hidden><img src="check.svg " /></button></td>
                 </form>
             </tr>
         @endforeach
@@ -56,14 +57,14 @@
 @endsection
 
 @section('tableCreate')
-    <form action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data" class="center">
     @csrf
-        <input type="text" name="name" placeholder="name" required>
-        <input type="text" name="lastname" placeholder="lastname" required>
-        <input type="text" name="pesel" placeholder="pesel" required>
-        <input type="text" name="phone" placeholder="phone" required>
-        <input type="text" name="room_id" placeholder="room_id"required>
-        <input type="text" name="address_id" placeholder="address_id" required>
-        <button type="submit" class="btn btn-warning" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
+        <input type="text" name="name" placeholder="name" class="m-2" required>
+        <input type="text" name="lastname" placeholder="lastname" class="m-2" required>
+        <input type="text" name="pesel" placeholder="pesel" class="m-2" required>
+        <input type="text" name="phone" placeholder="phone" class="m-2" required>
+        <input type="text" name="room_id" placeholder="room_id" class="m-2" required>
+        <input type="text" name="address_id" placeholder="address_id" class="m-2" required>
+        <button type="submit" class="btn btn-warning m-2" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
     </form>
 @endsection

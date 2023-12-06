@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
 <head>
     <title>CRUD</title>
     <meta charset="utf-8">
@@ -21,6 +21,7 @@
         @endforeach
         <hr class="divider m-5" />
     </div>
+    <div class="fixed-bottom" style="text-align: right"><img src="/iconsmall.png"></div>
 </div>
 </body>
 </html>
