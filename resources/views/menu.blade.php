@@ -17,7 +17,7 @@
     </div>
     <div class="text-center">
         @foreach ($tables as $table)
-            <a class="btn btn-primary m-1" href="/{{ $table->name }}"> {{ $table->name }} </a>
+            <a class="btn btn-primary m-1" href="/{{ $table }}"> {{ $table }} </a>
         @endforeach
         <hr class="divider m-5" />
     </div>
