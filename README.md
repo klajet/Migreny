@@ -7,10 +7,10 @@ Zadanie na laby 6 i 7 z Aplikacji Internetowych
 - [x] Factories
 - [x] Seeders 
 - [x] Menu (?)
-- [ ] CRUD template
+- [x] CRUD template
 - [x] Tables CRUD
   - [x] Create 
   - [x] Read
   - [x] Update
   - [x] Delete
-- [ ] Test with other DB
+- [x] Test with other DB
