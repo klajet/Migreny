@@ -59,12 +59,12 @@
 @section('tableCreate')
     <form action="{{ route('doctors.store') }}" method="POST" enctype="multipart/form-data" class="center">
     @csrf
-        <input type="text" name="name" placeholder="name" class="m-2" required>
-        <input type="text" name="lastname" placeholder="lastname" class="m-2" required>
-        <input type="text" name="pesel" placeholder="pesel" class="m-2" required>
-        <input type="text" name="phone" placeholder="phone" class="m-2" required>
-        <input type="text" name="room_id" placeholder="room_id" class="m-2" required>
-        <input type="text" name="address_id" placeholder="address_id" class="m-2" required>
-        <button type="submit" class="btn btn-warning m-2" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
+        <input type="text" name="name" placeholder="name" class="m-1" required>
+        <input type="text" name="lastname" placeholder="lastname" class="m-1" required>
+        <input type="text" name="pesel" placeholder="pesel" class="m-1" required>
+        <input type="text" name="phone" placeholder="phone" class="m-1" required>
+        <input type="text" name="room_id" placeholder="room_id" class="m-1" style="width: 20%" required>
+        <input type="text" name="address_id" placeholder="address_id" class="m-1" style="width: 20%" required>
+        <button type="submit" class="btn btn-warning m-1" onclick="return confirm('Are you sure you want to insert this item?');">Create</button>
     </form>
 @endsection
