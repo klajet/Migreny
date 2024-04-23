@@ -14,3 +14,7 @@ Zadanie na laboratoria 6 i 7 z Aplikacji Internetowych, polegające na utworzeni
   - [x] Update
   - [x] Delete
 - [x] Test with other DB
+
+
+![obraz](https://github.com/klajet/Migreny/assets/126820289/50ec4990-310e-4791-8c37-516933faa2c7)
+![obraz](https://github.com/klajet/Migreny/assets/126820289/3a3be610-49bb-4a41-90dd-762e41a986a8)
