@@ -1,6 +1,6 @@
 # <p align="center">Migreny</p>
 
-Zadanie na laby 6 i 7 z Aplikacji Internetowych
+Zadanie na laboratoria 6 i 7 z Aplikacji Internetowych, polegające na utworzeniu prostego panelu administratora (CRUD) w PHP Laravel 
 
 ### ToDo
 - [x] Migrations
